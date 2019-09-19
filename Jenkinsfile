@@ -6,5 +6,10 @@ pipeline {
 				sh 'php --version'
 			}
 		}
+		stage('deploy') {
+			steps{
+				sh 'echo deployed'
+			}
+		}
 	}
 }
