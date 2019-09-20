@@ -2,17 +2,17 @@ pipeline {
 	agent any
 	stages {
 		stage('build') {
-			//when { branch 'master' }
+			when { branch 'master' }
 			steps {
 				echo env.BRANCH_NAME
 			}
 		}
 		stage('deploy') {
-			//when { branch 'master' }
+			when { branch 'master' }
 			steps{
-				sh 'echo deployed'
+				echo "deployed"
 				writeFile file: "usefulfile.txt", text: "This file is useful, need to archive it."
-				sh 'echo test branch again'
+				echo "test branch again"
 			}
 		}
 	}
