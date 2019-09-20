@@ -12,7 +12,7 @@ pipeline {
 			steps{
 				sh 'echo deployed'
 				writeFile file: "usefulfile.txt", text: "This file is useful, need to archive it."
-				sh 'echo test branch'
+				sh 'echo test branch again'
 			}
 		}
 	}
