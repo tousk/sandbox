@@ -10,9 +10,9 @@ pipeline {
 		stage('deploy') {
 			when { branch 'master' }
 			steps{
-				echo deployed
+				echo "deployed"
 				writeFile file: "usefulfile.txt", text: "This file is useful, need to archive it."
-				echo test branch again
+				echo "test branch again"
 			}
 		}
 	}
